@@ -1,6 +1,6 @@
 const EN_KEYWORDS = ["Postal Code", "Post Code", "Postal", "Post"];
 const HE_KEYWORDS = ["מיקוד"];
-const POPUP_DIV = "<div class='PostalHelperPopupBox-202012'>CODE</div>"
+const POPUP_DIV = "<div class='PostalHelperPopupBox-202012'>CODE</div>";
 
 function wordInPage(keyword){
     return (document.documentElement.textContent || document.documentElement.innerText).indexOf(keyword) > -1;

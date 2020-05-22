@@ -5,10 +5,12 @@
   "description": "If postal input keyword appears on page, you postal code will show on top right",
   "permissions": ["geolocation", "activeTab"],
 
-  "background": {
-      "scripts": ["backgroundKeywordFinder.js"],
-      "persistent": false
-  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["main.css"],
+      "js": ["contentPostalHelper.js"]
+    }],
 
   "author": "ziv.r"
 }
