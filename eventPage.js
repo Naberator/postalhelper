@@ -1,7 +1,5 @@
-import {POSTAL_COMMAND_MSG} from "./CONST";
-
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
-    if (request.command === POSTAL_COMMAND_MSG) {
+    if (request.command === "POSTAL_CODE") {
         let location = navigator.geolocation;
 
         if (location) {

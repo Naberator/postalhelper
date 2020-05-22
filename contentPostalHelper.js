@@ -1,5 +1,3 @@
-import {POSTAL_COMMAND_MSG} from "./CONST";
-
 const EN_KEYWORDS = ["Postal Code", "Post Code", "Postal", "Post"];
 const HE_KEYWORDS = ["מיקוד"];
 const POPUP_DIV = "<div class='PostalHelperPopupBox-202012'>CODE</div>";
@@ -19,7 +17,7 @@ function getPopupBox(code) {
 function popHelper() {
     chrome.runtime.sendMessage(
         {
-            command: POSTAL_COMMAND_MSG,
+            command: "POSTAL_CODE",
             function (postalCode) {
                 document.getElementById("parentID").innerHTML += getPopupBox(postalCode);
             }
@@ -30,7 +28,3 @@ if (dictionary().some((keyword) => wordInPage(keyword))) {
     console.log("Found the word postal reference on page. popping PostalHelper");
     popHelper();
 }
-
-
-
-
