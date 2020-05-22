@@ -35,7 +35,7 @@ function popHelper() {
 }
 
 if (dictionary().some((keyword) => wordInPage(keyword))) {
-    console.log("Found the word %s on page. popping PostalHelper", keyword);
+    console.log("Found the word postal reference on page. popping PostalHelper");
     popHelper();
 }
 
