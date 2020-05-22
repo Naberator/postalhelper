@@ -3,7 +3,6 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
         let location = navigator.geolocation;
 
         if (location) {
-            if (location) {
                 location.getCurrentPosition((position => {
                     new maps.GeoCoder().geoCode(
                         {
@@ -15,5 +14,4 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
                 );}))
             }
         }
-    }
 });
