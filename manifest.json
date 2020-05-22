@@ -10,7 +10,13 @@
       "matches": ["<all_urls>"],
       "css": ["main.css"],
       "js": ["contentPostalHelper.js"]
-    }],
+    }
+  ],
+
+  "background": {
+    "scripts":      ["eventPage.js"],
+    "persistent":   false
+  },
 
   "author": "ziv.r"
 }
