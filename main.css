@@ -1,0 +1,12 @@
+.PostalHelperPopupBox-202012 {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 150px;
+    padding: 10px;
+    margin: 10px;
+
+    border: 10px darkorange;
+    background-color: cornsilk;
+}

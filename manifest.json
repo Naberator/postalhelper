@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "PostalHelper",
+  "version": "1.0.0",
+  "description": "If postal input keyword appears on page, you postal code will show on top right",
+  "permissions": ["geolocation", "activeTab"],
+
+  "background": {
+      "scripts": ["backgroundKeywordFinder.js"],
+      "persistent": false
+  },
+
+  "author": "ziv.r"
+}
