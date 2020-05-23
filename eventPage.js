@@ -3,7 +3,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
         let location = navigator.geolocation;
 
         if (location) {
-                location.getCurrentPosition((position => {
+                location.getCurrentPosition(position => {
                     new google.maps.GeoCoder().geoCode(
                         {
                             "latLng": new google.maps.LatLng(location.coords.latitude, position.coords.altitude),
@@ -12,7 +12,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
                             "postalCode": res[0].formatted_address.match(/, \s\w{2}\s(\d{7})/)
                         }))
                     );
-                }))
+                }, error => console.log("Failed to get current position. " + error.message))
             }
         }
 });
